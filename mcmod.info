@@ -1,0 +1,9 @@
+[{
+  "modid": "holdmyitem",
+  "name": "Hold My Item (1.12.2 Backport)",
+  "description": "Renders your first-person arm while holding items. Client-side only. Inspired by Hold My Items by thesapling and the Forge port by bene2212.",
+  "version": "${version}",
+  "mcversion": "1.12.2",
+  "authorList": ["backport"],
+  "credits": "Original idea: thesapling. Forge port: bene2212."
+}]
