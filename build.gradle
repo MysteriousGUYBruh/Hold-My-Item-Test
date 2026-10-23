@@ -14,21 +14,22 @@ group = "com.holdmyitem"
 archivesBaseName = "holdmyitem-1.12.2"
 
 sourceCompatibility = targetCompatibility = '1.8'
-compileJava { sourceCompatibility = targetCompatibility = '1.8' }
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['.']
+            include '*.java'
+        }
+        resources {
+            srcDirs = ['.']
+            include 'mcmod.info'
+        }
+    }
+}
 
 minecraft {
     version = "1.12.2-14.23.5.2860"
     runDir = "run"
     mappings = "stable_39"
-}
-
-processResources {
-    inputs.property "version", project.version
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-        expand 'version': project.version
-    }
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
-    }
 }
